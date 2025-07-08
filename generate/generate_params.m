@@ -1,26 +1,26 @@
-% %% this matlab code generate params.mat for each configuration folder
-% %% WARNING: don't overwrite!
-% 
-% %% sampling for a CSC:  |sand\   clay|
-% %%                      |clay \      | 
-% TwoLayerConfig('C','S','C');
+%% this matlab code generate params.mat for each configuration folder
+%% WARNING: don't overwrite!
+
+Nmc = 1000;
+%% sampling for a CSC:  |sand\   clay|
+%%                      |clay \      | 
+% TwoLayerConfig('C','S','C',Nmc);
 
 %% sampling for a CSS:  |sand\   sand|
 %%                      |clay \      | 
-TwoLayerConfig('C','S','S');
+TwoLayerConfig('C','S','S',Nmc);
 
-% %% sampling for a SCC:  |clay\   clay|
-% %%                      |sand \      | 
-% TwoLayerConfig('S','C','C');
-% 
-% %% sampling for a SCS:  |clay\   sand|
-% %%                      |sand \      | 
-% TwoLayerConfig('S','C','S');
+%% sampling for a SCC:  |clay\   clay|
+%%                      |sand \      | 
+TwoLayerConfig('S','C','C',Nmc);
+
+%% sampling for a SCS:  |clay\   sand|
+%%                      |sand \      | 
+TwoLayerConfig('S','C','S',Nmc);
 
 
 
-function TwoLayerConfig(fw_bot,fw_top,hw)
-    Nmc = 4000;
+function TwoLayerConfig(fw_bot,fw_top,hw,Nmc)
     Vcl_fw_bot = material_sampling(fw_bot,Nmc);
     Vcl_fw_top = material_sampling(fw_top,Nmc);
     Vcl_hw = material_sampling(hw,Nmc);
