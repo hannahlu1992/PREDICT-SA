@@ -24,36 +24,36 @@ generate_for_folder('../CSS/data6/');
 
 %% sampling for a CSC:  |sand\   clay|
 %%                      |clay \      | 
-% generate_for_folder('../CSC/data/');
-% generate_for_folder('../CSC/data_hat/');
-% generate_for_folder('../CSC/data1/');
-% generate_for_folder('../CSC/data2/');
-% generate_for_folder('../CSC/data3/');
-% generate_for_folder('../CSC/data4/');
-% generate_for_folder('../CSC/data5/');
-% generate_for_folder('../CSC/data6/');
+generate_for_folder('../CSC/data/');
+generate_for_folder('../CSC/data_hat/');
+generate_for_folder('../CSC/data1/');
+generate_for_folder('../CSC/data2/');
+generate_for_folder('../CSC/data3/');
+generate_for_folder('../CSC/data4/');
+generate_for_folder('../CSC/data5/');
+generate_for_folder('../CSC/data6/');
 
-% %% sampling for a SCC:  |clay\   clay|
-% %%                      |sand \      | 
-% generate_for_folder('../SCC/data/')
-% generate_for_folder('../SCC/data_hat/');
-% generate_for_folder('../SCC/data1/');
-% generate_for_folder('../SCC/data2/');
-% generate_for_folder('../SCC/data3/');
-% generate_for_folder('../SCC/data4/');
-% generate_for_folder('../SCC/data5/');
-% generate_for_folder('../SCC/data6/');
+%% sampling for a SCC:  |clay\   clay|
+%%                      |sand \      | 
+generate_for_folder('../SCC/data/')
+generate_for_folder('../SCC/data_hat/');
+generate_for_folder('../SCC/data1/');
+generate_for_folder('../SCC/data2/');
+generate_for_folder('../SCC/data3/');
+generate_for_folder('../SCC/data4/');
+generate_for_folder('../SCC/data5/');
+generate_for_folder('../SCC/data6/');
 
-% %% sampling for a SCS:  |clay\   sand|
-% %%                      |sand \      | 
-% generate_for_folder('../SCS/data/');
-% generate_for_folder('../SCS/data_hat/');
-% generate_for_folder('../SCS/data1/');
-% generate_for_folder('../SCS/data2/');
-% generate_for_folder('../SCS/data3/');
-% generate_for_folder('../SCS/data4/');
-% generate_for_folder('../SCS/data5/');
-% generate_for_folder('../SCS/data6/');
+%% sampling for a SCS:  |clay\   sand|
+%%                      |sand \      | 
+generate_for_folder('../SCS/data/');
+generate_for_folder('../SCS/data_hat/');
+generate_for_folder('../SCS/data1/');
+generate_for_folder('../SCS/data2/');
+generate_for_folder('../SCS/data3/');
+generate_for_folder('../SCS/data4/');
+generate_for_folder('../SCS/data5/');
+generate_for_folder('../SCS/data6/');
 
 
 function generate_for_folder(FolderName)
@@ -129,7 +129,7 @@ function generate_for_folder(FolderName)
     
         %% save data
         [~, grandParentFolder] = fileparts(fileparts(fileparts(FolderName)));  % gets e.g.,'CSC'
-        filename = sprintf('%s_%d',grandParentFolder,i+1000);
+        filename = sprintf('%s_%d',grandParentFolder,i);
         filepath = fullfile(FolderName, filename);
 
         perm = zeros(10000,2,Nsim);
